@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+				th:replace="base::layout(~{::section})" >
+<head>
+	<meta charset="UTF-8" />
+	<title>IBCS-PRIMAX Home Page</title>
+</head>
+<body>
+
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 offset-md-4">
+				
+				<div class="my-card mt-3">
+				  <h1 class="text-center">Add the Employee details</h1>
+				 
+				  <form action="" th:action="@{/do_addEmp}" method="post" th:object="${emp}"> 
+						    
+						    <!--Name filed -->
+						    <div class="form-group">
+							    <label for="name_filed" class="form-label">Name</label>
+							    
+							    <input name="Name"
+							    	   type="text" 
+							    	   class="form-control" 
+							    	   id="name_filed" 
+							    	   aria-describedby="nameHelp"
+							    	   th:value="${emp.name}"
+							    	   />
+							</div>
+							
+							<!--Unique Code filed -->
+						    <div class="form-group">
+							    <label for="uniqueCode" class="form-label">Unique Code</label>
+							    
+							    <input name="Code"
+							    		type="number" 
+							    	   class="form-control" 
+							    	   id="uniqueCode" 
+							    	   aria-describedby="codeHelp"
+							    	   th:value="${emp.code}"
+							    	   />
+							</div>
+						  
+				  	 		 <!--Dob filed -->
+						    <div class="form-group">
+							    <label for="date_filed" class="form-label">Date of Birth</label>
+							    
+							    <input name="Dob"
+							    		type="date" 
+							    	   class="form-control" 
+							    	   id="date_filed" 
+							    	   aria-describedby="dateHelp"
+							    	   th:value="${emp.dob}"
+							    	   />
+							</div>
+							
+							<!--Gender filed -->
+						    <div class="form-group">
+							    <label  for="Gender_filed" class="form-label">Gender</label>
+							   
+							    	   <select name="Gender" th:value="${emp.gender}"> 
+										  <option selected>Male</option>
+										  <option value="1">Female</option>
+										  <option value="2">Other</option>
+									  </select>
+							</div>
+							
+							<!--Phone Number filed -->
+						    <div class="form-group">
+							    <label for="number_filed" class="form-label">Phone Number</label>
+							    
+							    <input name="Mobile"
+							    		 type="number" 
+							    	   class="form-control" 
+							    	   id="number_filed" 
+							    	   aria-describedby="numberHelp"
+							    	   th:value="${emp.mobile}"
+							    	   />
+							</div>
+							
+							<!--Department filed -->
+						    <div class="form-group">
+							    <label for="deptId" class="form-label">Department Id</label>
+							    
+							    <select name="this.dept" class="form-select" aria-label="Default select example">
+										  <option selected>Developer</option>
+										  <option value="1">Accounts</option>
+										  <option value="2">HR</option>
+										  <option value="3">Markating</option>
+									  </select>
+							</div>
+							
+					  
+							<div class="container text-center">
+						  		<button type="submit" class="btn btn-primary">Add</button>
+							</div>
+					  	
+				  </form>
+				</div>	
+				</div>
+			</div>
+		</div>
+	</section>
+	
+</body>
+</html>
