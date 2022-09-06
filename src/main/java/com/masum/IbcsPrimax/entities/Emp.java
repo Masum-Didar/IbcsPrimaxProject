@@ -1,28 +1,40 @@
 package com.masum.IbcsPrimax.entities;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.BatchSize;
+import org.springframework.lang.NonNull;
 
 @Entity
+@Table(name = "Employee")
 public class Emp {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int Id;
 	
+	@Column(unique = true, length = 4)
 	private int Code;
 	
+	//@NotNull
+    //@Size(min = 3, max = 35)
+	@NonNull
 	private String Name;
 	
 	private String Dob;
 	
 	private String Gender;
 	
+	@Column(length = 14)
 	private String Mobile;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Dept dept;
 	
 	

@@ -18,34 +18,36 @@ public class IbcsPrimaxProjectApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(IbcsPrimaxProjectApplication.class, args);
 		
-		EmpRepository empRepository = context.getBean(EmpRepository.class);
-		DeptRepository deptRepository = context.getBean(DeptRepository.class);
-		
-		
-		//CREAT Table
-		
+//		EmpRepository empRepository = context.getBean(EmpRepository.class);
+//		DeptRepository deptRepository = context.getBean(DeptRepository.class);
+//		
+//		
+//		//CREAT Table
+//		
 //		Emp emp = new Emp();
 //		
-//		emp.setName("Monir");
-//		emp.setCode(123);
+//		emp.setName("Arfat");
+//		emp.setCode(6666);
 //		emp.setDob("08/02/1997");
 //		emp.setGender("Male");
 //		emp.setMobile("01794708794");
-//		emp.setDept(null);
+//		
+//		Dept dept = new Dept();
+//		emp.setDept(dept);
 //		
 //		Emp emp0 = empRepository.save(emp);
 //		System.out.println(emp0);
-
-		
-		//CREAT Dept Table
-//		Dept dept = new Dept();
+//
+//		
+//		//CREAT Dept Table
+////		Dept dept = new Dept();
 //		dept.setId(01);
 //		dept.setName("Developer Team");
-//		dept.setActive("Active");
+//		dept.setActive(true);
 //		
 //		Dept dept1 = deptRepository.save(dept);
 //		System.out.println(dept1);
-		
+//		
 //		Emp emp1 = new Emp();
 //		
 //		emp1.setName("Tayab");
